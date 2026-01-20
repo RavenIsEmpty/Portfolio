@@ -61,7 +61,8 @@ const I18N = {
     "theme.dark": "ងងឹត",
     "theme.light": "ភ្លឺ",
 
-    "hero.kicker": "ឆ្នាំទី 4 IT • UAT • កំពុងធ្វើកិច្ចការស្រាវជ្រាវ",
+    "hero.kicker":
+      "ព័ត៌មានវិទ្យា ឆ្នាំទី 4 • UAT • កំពុងធ្វើកិច្ចការស្រាវជ្រាវ",
     "hero.lead":
       "និស្សិត IT និងធ្វើការជា UAT។ ខ្ញុំបានទៅសាកល្បងប្រព័ន្ធក្រុមហ៊ុនពិតជាក់ស្តែង និងចាប់ផ្តើមសរសេរ core logic សម្រាប់កិច្ចការស្រាវជ្រាវរបស់ខ្ញុំ៖ <strong>Domestic Logistic Management System – Cambodia</strong>។",
     "hero.lead2":
