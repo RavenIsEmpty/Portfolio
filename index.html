@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HUN Sokheng — IT Year 4 student & UAT. Thesis: Domestic Logistic Management System (Cambodia)."
+    />
+    <title>HUN Sokheng — IT Student & UAT</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Scroll progress bar -->
+    <div id="scrollbar" aria-hidden="true"></div>
+
+    <!-- Cursor glow (subtle light that follows cursor) -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Hero “matrix” background -->
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="matrix"></canvas>
+    </div>
+
+    <header class="header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#home" aria-label="Go to home">
+          <div class="brand-badge"><span>&lt;/&gt;</span></div>
+          <span class="brand-title">HSH</span>
+        </a>
+
+        <button
+          id="menuToggle"
+          class="pill menu-btn"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="pill-icon">☰</span>
+          <span data-i18n="nav.menu">Menu</span>
+        </button>
+
+        <nav id="navlinks" class="navlinks" aria-label="Primary">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#thesis" data-i18n="nav.thesis">Thesis</a>
+          <a href="#uat" data-i18n="nav.uat">UAT</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="controls">
+          <button
+            id="langToggle"
+            class="pill"
+            type="button"
+            aria-label="Toggle language"
+          >
+            <span class="pill-icon">🌐</span>
+            <span id="langLabel">EN</span>
+          </button>
+
+          <button
+            id="themeToggle"
+            class="pill"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span class="pill-icon">🌓</span>
+            <span id="themeLabel" data-i18n="theme.dark">Dark</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="container hero-grid reveal">
+          <div class="hero-text">
+            <div class="kicker">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-i18n="hero.kicker"
+                >IT Year 4 • UAT • Thesis in progress</span
+              >
+            </div>
+
+            <h1>Hi, I'm <span class="accent">HUN Sokheng</span></h1>
+
+            <p class="lead" data-i18n="hero.lead">
+              IT student &amp; UAT engineer in training. I test real enterprise
+              systems and build core logic for my thesis:
+              <strong>Domestic Logistic Management System – Cambodia</strong>.
+            </p>
+
+            <p class="lead smaller" data-i18n="hero.lead2">
+              I care about clean code, reliable systems, and giving users a
+              smooth experience — from login to the last delivery drop.
+            </p>
+
+            <div class="cta">
+              <a
+                href="#projects"
+                class="btn primary"
+                data-i18n="hero.btnProjects"
+                >View Projects</a
+              >
+              <!-- TODO: Replace with your real CV link (PDF in repo or Google Drive) -->
+              <a href="#" class="btn secondary" title="TODO: Add your CV link"
+                ><span data-i18n="hero.btnCv">Download CV (TODO)</span></a
+              >
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-pill" data-i18n="hero.meta1">
+                Based in Cambodia
+              </div>
+              <div class="meta-pill" data-i18n="hero.meta2">
+                Backend + Testing
+              </div>
+              <div class="meta-pill" data-i18n="hero.meta3">
+                Open to internships
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card reveal">
+            <div class="card profile">
+              <div class="profile-top">
+                <div class="avatar">
+                  <!-- Put your photo at: assets/img/profile.jpg -->
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Portrait of HUN Sokheng"
+                    onerror="
+                      this.remove();
+                      this.parentElement.classList.add('noimg');
+                    "
+                  />
+                  <span class="fallback">HS</span>
+                </div>
+                <div>
+                  <h2>HUN Sokheng</h2>
+                  <p data-i18n="profile.role">
+                    IT Student • UAT • Junior Backend
+                  </p>
+                  <p class="muted smaller">
+                    <span data-i18n="profile.desc"
+                      >Testing billing/HR systems &amp; building logistics
+                      tracking for my thesis.</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="profile-body">
+                <div class="badge-row">
+                  <span class="badge">C++</span>
+                  <span class="badge">.NET / C#</span>
+                  <span class="badge">SQL / Postgres</span>
+                  <span class="badge">API Testing</span>
+                  <span class="badge">GitHub</span>
+                </div>
+
+                <div class="terminal" aria-label="Terminal preview">
+                  <div class="terminal-head">
+                    <span class="tdot red" aria-hidden="true"></span>
+                    <span class="tdot yellow" aria-hidden="true"></span>
+                    <span class="tdot green" aria-hidden="true"></span>
+                    <span class="terminal-title">terminal • tracking.log</span>
+                  </div>
+                  <pre class="terminal-body">
+$ whoami
+> it_student_year4
+
+$ thesis status
+> DLTS Cambodia: core logic in progress
+
+$ strengths
+> UAT • SQL debugging • API testing</pre
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 data-i18n="skills.title">Skills</h2>
+            <p class="sub">
+              I balance <strong>code</strong> and <strong>quality</strong>:
+              writing backend logic, understanding databases, and designing test
+              flows that catch bugs early.
+            </p>
+          </header>
+
+          <div class="grid cols-3">
+            <article class="tile reveal">
+              <h3>Backend &amp; APIs</h3>
+              <p>
+                ASP.NET Core basics, REST API design, authentication, and simple
+                business logic for logistics workflows.
+              </p>
+              <div class="tagrow">
+                <span class="tag">.NET / C#</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">JSON</span>
+              </div>
+            </article>
+
+            <article class="tile reveal">
+              <h3>Databases &amp; Queries</h3>
+              <p>
+                Comfortable with schemas, joins, writing queries to debug real
+                data, and designing tables for my thesis.
+              </p>
+              <div class="tagrow">
+                <span class="tag">SQL Server</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Indexes</span>
+              </div>
+            </article>
+
+            <article class="tile reveal">
+              <h3>Testing &amp; UAT</h3>
+              <p>
+                Creating test cases, reproducing bugs, writing clear reports,
+                and working with developers to ship fixes.
+              </p>
+              <div class="tagrow">
+                <span class="tag">UAT</span>
+                <span class="tag">Bug reporting</span>
+                <span class="tag">Test cases</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 data-i18n="projects.title">Featured Projects</h2>
+            <p class="sub">
+              A mix of thesis prototypes and UAT case studies. Replace TODO
+              links with your real repos/screenshots.
+            </p>
+          </header>
+
+          <div class="grid cols-2">
+            <article class="project-card reveal">
+              <header class="project-head">
+                <div>
+                  <h3>Domestic Logistics Tracking (Prototype)</h3>
+                  <p class="meta">
+                    Backend API • Real-time status updates • QR-based tracking
+                  </p>
+                </div>
+                <!-- TODO: Put your real repo link -->
+                <a href="#" class="pill-link" title="TODO: add your repo link"
+                  >GitHub (TODO)</a
+                >
+              </header>
+              <p>
+                Core API and database schema for branch-to-branch shipments,
+                driver trips, and preventing missed drops with clear status
+                transitions.
+              </p>
+              <ul class="project-list">
+                <li>
+                  Shipment lifecycle: created → picked → in transit → delivered
+                </li>
+                <li>Rule checks to detect potential missed drops</li>
+                <li>API ready for future mobile integration</li>
+              </ul>
+              <div class="tagrow">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">EF Core</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <header class="project-head">
+                <div>
+                  <h3>UAT Scenarios (Internal HR System)</h3>
+                  <p class="meta">
+                    Manual testing • Bug reports • SQL validation
+                  </p>
+                </div>
+                <!-- TODO: Add a PDF or Notion link -->
+                <a href="#" class="pill-link" title="TODO: add your case study"
+                  >Case Study (TODO)</a
+                >
+              </header>
+              <p>
+                Designed UAT packs for login, attendance, leave requests, and
+                approval workflows — focusing on edge cases and validating data
+                at DB level.
+              </p>
+              <ul class="project-list">
+                <li>Structured test cases from real user flows</li>
+                <li>Clear bug reports with steps + screenshots</li>
+                <li>SQL verification: UI vs database state</li>
+              </ul>
+              <div class="tagrow">
+                <span class="tag">UAT</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">Documentation</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- THESIS -->
+      <section id="thesis" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 data-i18n="thesis.title">
+              Thesis: Domestic Logistic Management System
+            </h2>
+            <p class="sub">
+              Real-time shipment tracking for Cambodia, focusing on preventing
+              missed drops and giving customers clear visibility.
+            </p>
+          </header>
+
+          <div class="grid cols-2">
+            <article class="tile reveal">
+              <h3>Problem &amp; Goals</h3>
+              <p>
+                Many local logistics flows still use manual tracking. Shipments
+                can be delayed or dropped without customers knowing what
+                happened.
+              </p>
+              <ul class="project-list">
+                <li>Real-time shipment status (and later: location)</li>
+                <li>Driver workflow that reduces missed steps</li>
+                <li>Clear audit trail per shipment</li>
+              </ul>
+            </article>
+
+            <article class="tile reveal">
+              <h3>Core Logic (Planned)</h3>
+              <p>
+                Simple but solid backend rules that can later be used by mobile
+                and web apps.
+              </p>
+              <ul class="project-list">
+                <li>QR codes for quick scanning</li>
+                <li>Driver trip sessions and checkpoints</li>
+                <li>No “Delivered” if required checkpoints are missed</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- UAT EXPERIENCE -->
+      <section id="uat" class="section alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 data-i18n="uat.title">UAT Experience</h2>
+            <p class="sub">
+              I work as a UAT intern, focusing on business logic and how real
+              users interact with the system.
+            </p>
+          </header>
+
+          <div class="grid cols-3">
+            <article class="tile reveal">
+              <h3>Writing Test Cases</h3>
+              <p>
+                Clear, repeatable scenarios based on real workflows — not just
+                happy paths.
+              </p>
+              <ul class="project-list small">
+                <li>Login &amp; role-based access</li>
+                <li>Billing / invoice flows</li>
+                <li>HR attendance &amp; approvals</li>
+              </ul>
+            </article>
+
+            <article class="tile reveal">
+              <h3>Debugging with Data</h3>
+              <p>
+                Using SQL queries to confirm system state matches UI and
+                business rules.
+              </p>
+              <ul class="project-list small">
+                <li>Find mismatched totals</li>
+                <li>Check wrong statuses</li>
+                <li>Validate after bug fixes</li>
+              </ul>
+            </article>
+
+            <article class="tile reveal">
+              <h3>Working with Devs</h3>
+              <p>
+                Steps to reproduce + logs + screenshots so devs can fix issues
+                quickly.
+              </p>
+              <ul class="project-list small">
+                <li>Structured bug reports</li>
+                <li>Retest after fixes</li>
+                <li>Communicate edge cases</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <header class="section-head">
+              <h2 data-i18n="contact.title">Contact</h2>
+              <p class="sub">
+                <span data-i18n="contact.sub"
+                  >I’m open to internships or junior roles around backend,
+                  testing, and logistics systems.</span
+                >
+              </p>
+            </header>
+
+            <div class="contact-info">
+              <div class="contact-list">
+                <div class="contact-item">
+                  <div class="ci-icon">✉️</div>
+                  <div>
+                    <div class="ci-title">Email</div>
+                    <div class="ci-value">
+                      <span id="emailText">hunsokheng1@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="ci-icon">🐙</div>
+                  <div>
+                    <div class="ci-title">GitHub</div>
+                    <div class="ci-value">
+                      <a
+                        href="https://github.com/RavenIsEmpty"
+                        target="_blank"
+                        rel="noreferrer"
+                        >github.com/RavenIsEmpty</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="ci-icon">in</div>
+                  <div>
+                    <div class="ci-title">LinkedIn</div>
+                    <div class="ci-value">
+                      <!-- TODO: Replace with your real LinkedIn -->
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer"
+                        title="TODO: add your LinkedIn"
+                        >Add LinkedIn (TODO)</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-actions">
+                <button
+                  id="copyEmail"
+                  class="btn"
+                  type="button"
+                  data-i18n="contact.copy"
+                >
+                  <span data-i18n="contact.copy">📋 Copy email</span>
+                </button>
+                <a
+                  class="btn secondary"
+                  href="#home"
+                  data-i18n="contact.backTop"
+                  >Back to top</a
+                >
+              </div>
+
+              <p class="contact-tip muted tiny">
+                <span data-i18n="contact.tip"
+                  >Tip: Add 2–3 screenshots of your thesis prototype to make the
+                  Projects section look much stronger.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" onsubmit="return false;">
+            <!-- NOTE: Demo only. TODO: connect to Formspree or your backend later -->
+            <h3>Quick message (demo)</h3>
+            <label>
+              Name
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="your@email.com" />
+            </label>
+            <label>
+              Message
+              <textarea
+                rows="4"
+                placeholder="Tell me about your project or role..."
+              ></textarea>
+            </label>
+            <button type="button" class="btn primary">Send (demo only)</button>
+            <p class="muted tiny">
+              Demo form only. TODO: connect to a real service when ready.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <button id="toTop" aria-label="Back to top">↑</button>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div class="footer-left">
+          <span>© <span id="year"></span> HUN Sokheng</span>
+          <span class="footer-dot" aria-hidden="true">•</span>
+          <span class="muted" data-i18n="footer.role"
+            ><span data-i18n="footer.role">IT Student &amp; UAT</span></span
+          >
+        </div>
+        <div class="footer-right">
+          <span class="muted" data-i18n="footer.built"
+            >Built with HTML/CSS/JS</span
+          >
+          <span class="footer-dot" aria-hidden="true">•</span>
+          <a
+            class="footer-link"
+            href="https://github.com/RavenIsEmpty"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
